@@ -29,7 +29,7 @@ const toggleDropdown = () => {
   <div class="relative">
     <button
       @click="toggleDropdown"
-      class="text-xs text-[#888888] ms-96 sm:ms-60 me-4 p-1 focus:bg-white border-2 border-transparent focus:border-[#222222] focus:text-black"
+      class="text-xs text-[#888888] ms-60 me-4 p-1 focus:bg-white border-2 border-transparent focus:border-[#222222] focus:text-black"
     >
       My Cart ({{ cartStore.cart.length }})
     </button>
