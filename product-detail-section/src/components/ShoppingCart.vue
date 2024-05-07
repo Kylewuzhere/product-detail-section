@@ -39,7 +39,7 @@ const toggleDropdown = () => {
         <img src="../assets/images/classic-tee.jpg" alt="classic-tee" class="w-20" />
         <div>
           <p>{{ item.title }}</p>
-          <p class="font-bold">{{ item.quantity }}x ${{ item.price }}.00</p>
+          <p>{{ item.quantity }}x <span class="font-bold">${{ item.price }}.00</span></p>
           <p>Size: {{ item.size }}</p>
         </div>
       </div>
