@@ -19,3 +19,8 @@ npm install
 npm run format
 npm run dev
 ```
+
+## Deployment
+
+This project is deployed on Vercel.
+Access the web app on https://product-detail-section-phi.vercel.app/
