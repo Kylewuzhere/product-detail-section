@@ -1,5 +1,8 @@
 <script setup>
 import { ref, watch } from 'vue'
+import { useCartStore } from '@/stores/cartStore'
+
+const cartStore = useCartStore()
 
 const selectedSize = ref('')
 const data = ref([])
@@ -15,6 +18,10 @@ watch(
   },
   { immediate: true }
 )
+
+const addToCart = (title, price, id, size) => {
+  cartStore.addToCart(title, price, id, size)
+}
 
 const selectedProduct = (size) => {
   selectedSize.value = size
@@ -54,6 +61,7 @@ const selectedProduct = (size) => {
       </div>
       <button
         class="bg-white text-sm text-black font-bold border-2 border-black h-12 mt-8 w-40 hover:bg-black hover:text-white transition duration-200"
+        @click="addToCart(data.title, data.price, data.id, selectedSize)"
       >
         ADD TO CART
       </button>
